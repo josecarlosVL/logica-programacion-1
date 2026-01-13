@@ -1,8 +1,17 @@
-let num1 = parseFloat(prompt("Dame el primer número: "));
+let cuantos
+do{
+    cuantos = parseFloat(prompt("¿Cuántos números vas a ingresar?"))
+} while(isNaN(cuantos));
+let num =[];
+for (let i=1;i<=cuantos;i++){
+    num.push(parseFloat(prompt(`Dame el ${i}° número: `)))
+}
+
+/* let num1 = parseFloat(prompt("Dame el primer número: "));
 let num2 = parseFloat(prompt("Dame el segundo número: "));
 let num3 = parseFloat(prompt("Dame el tercer número: "));
-
-let vector = [num1,num2,num3];
+ */
+let vector = num
 
 let mayor = vector.sort((a, b) => a - b);
 let menor = mayor.toReversed();
